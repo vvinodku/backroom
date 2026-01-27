@@ -19,7 +19,7 @@ body {
     transform: scale(1.05);
 }
 
-#file1 { top: 15%; left: 20%; }
+#file1 { top: 45%; left: 20%; }
 #file2 { top: 55%; left: 60%; }
 #file3 { top: 25%; left: 65%; }
 
@@ -33,12 +33,22 @@ body {
     left: 35%;
 } */
 
-input {
-    font-family: monospace;
+.passwordBox {
+    width: 30%;
     position: absolute;
     top: 40%;
     left: 35%;
-    width: 30%;
+
+}
+
+.title {
+    font-family: monospace;
+    margin-left: 10px;
+}
+
+input {
+    font-family: monospace;
+    width: 100%;
     padding: 12px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.25);
