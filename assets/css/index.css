@@ -23,16 +23,6 @@ body {
 #file2 { top: 55%; left: 60%; }
 #file3 { top: 25%; left: 65%; }
 
-/* .passwordBox {
-    position: absolute;
-    border-radius: 16px;
-    padding: 30px;
-    width: 30%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.8);
-    top: 40%;
-    left: 35%;
-} */
-
 .passwordBox {
     width: 30%;
     position: absolute;

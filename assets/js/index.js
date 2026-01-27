@@ -32,22 +32,22 @@ let offsetX = 0;
 let offsetY = 0;
 let isDragging = false;
 
-topBar.addEventListener("pointerdown", (e) => {
+terminal.addEventListener("pointerdown", (e) => {
     isDragging = true;
-    topBar.setPointerCapture(e.pointerId);
+    terminal.setPointerCapture(e.pointerId);
 
-    offsetX = e.clientX - topBar.offsetLeft;
-    offsetY = e.clientY - topBar.offsetTop;
+    offsetX = e.clientX - terminal.offsetLeft;
+    offsetY = e.clientY - terminal.offsetTop;
 });
 
-topBar.addEventListener("pointermove", (e) => {
+terminal.addEventListener("pointermove", (e) => {
     if (!isDragging) return;
 
     terminal.style.left = e.clientX - offsetX + "px";
     terminal.style.top = e.clientY - offsetY + "px";
 });
 
-topBar.addEventListener("pointerup", () => {
+terminal.addEventListener("pointerup", () => {
     isDragging = false;
 });
 
