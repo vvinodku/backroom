@@ -1,0 +1,41 @@
+.file-stack {
+    position: relative;
+    width: 420px;
+    height: 600px;
+  }
+  
+.file-tab {
+    position: relative;
+    height: 56px;
+    width: 100%;
+    background: #e6e6e6;
+    border-radius: 12px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+/* TOP TAB */
+.file-tab::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 18px;
+  
+    width: 120px;
+    height: 16px;
+  
+    background: inherit;
+    border-radius: 10px 10px 0 0;
+  }
+  
+.file-tab .details {
+    position: absolute;
+    left: 20px;
+    bottom: -40px;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 12px;
+  }
+  

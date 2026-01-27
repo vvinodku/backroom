@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    width: 10vh;
+    height: 100vh;
+    background: rgb(16, 16, 16);
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", system-ui;
+    color: white;
+}
+
+.file {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.file:hover {
+    transform: scale(1.05);
+}
+
+#file1 { top: 15%; left: 20%; }
+#file2 { top: 55%; left: 60%; }
+#file3 { top: 25%; left: 65%; }
+
+/* .passwordBox {
+    position: absolute;
+    border-radius: 16px;
+    padding: 30px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    top: 40%;
+    left: 35%;
+} */
+
+input {
+    font-family: monospace;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    width: 30%;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    outline: none;
+}
+
+#terminal {
+    font-family: monospace;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 40%;
+    height: 20%;
+    top: 10%;
+    left: 10%;
+}
+
+#terminal.show {
+    display: flex;
+}
+
+#topBar {
+    background-color: rgb(42, 42, 42);
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    cursor: grab;
+    user-select: none;
+}
+
+#topBar:active {
+    cursor: grabbing;
+}
+
+#hint {
+    background-color: #222;
+    height: 75%;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    padding: 2%;
+}
+
+.cursor::after {
+    content: "▌";
+    animation: blink 1s infinite;
+}
+  
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+
+   
