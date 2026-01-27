@@ -51,3 +51,22 @@ terminal.addEventListener("pointerup", () => {
     isDragging = false;
 });
 
+//Password check and navigation
+const input = document.getElementById("passwordInput");
+const correctPassword = "abribe";
+
+input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        if (input.value === correctPassword) {
+            window.location.href = "file.html";
+        } else {
+            input.value = "";
+            input.placeholder = "Wrong password";
+            input.classList.add("error");
+        }
+    }
+});
+
+input.addEventListener("animationend", () => {
+    input.classList.remove("error");
+});

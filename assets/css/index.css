@@ -19,9 +19,9 @@ body {
     transform: scale(1.05);
 }
 
-#file1 { top: 45%; left: 20%; }
-#file2 { top: 55%; left: 60%; }
-#file3 { top: 25%; left: 65%; }
+#file1 { top: 45%; left: 10%; }
+#file2 { top: 55%; left: 80%; }
+#file3 { top: 15%; left: 75%; }
 
 .passwordBox {
     width: 30%;
