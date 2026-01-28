@@ -5,7 +5,7 @@ const terminal = document.getElementById('terminal');
 
 function showPopup() {
     terminal.classList.add('show');
-    type();
+    setTimeout(type, 2000);
 }
 
 secretFile.addEventListener('click', showPopup)
