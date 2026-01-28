@@ -1,0 +1,39 @@
+#container {
+    width: 100%;    
+}
+
+#trapezoid{
+    width: 320px;
+    height: 200px;
+    background: linear-gradient(135deg, #7dd3fc, #60a5fa); /* any fill */
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    position:absolute;
+    top:0%;
+    left: 0%;
+    z-index: 2;
+}
+
+#trapezoidBorder {
+    width: 320px;
+    height: 200px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    inset: -4px;                 /* border thickness */
+    background: #0f172a;         /* border color */
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    z-index: 1;
+}
+
+#frontSquare{
+    width: 320px;
+    height: 200px;
+    background: black;
+}
+
+#file1 {
+    width: 320px;
+    height: 250px;
+    clip-path: polygon(35% 30%, 0 30%, 0 100%, 100% 100%, 100% 30%, 65% 30%, 60% 21%, 41% 21%);
+    background-color: antiquewhite;
+}
