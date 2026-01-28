@@ -1,5 +1,5 @@
 //Terminal pop up
-const secretFile = document.getElementById('file3');
+const secretFile = document.getElementById('file1');
 const terminal = document.getElementById('terminal');
 
 
