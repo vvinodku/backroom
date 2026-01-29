@@ -105,11 +105,11 @@ input {
     height: 30%;
 }
 
-.error.closing{
+/* .error.closing{
     opacity: 0;
     transform: translateZ(0) scale(0.98);
     transition: opacity 900ms ease, transform 900ms ease;
-  }
+} */
 
 #errorTitle {
     height: 12%;
