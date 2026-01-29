@@ -116,6 +116,7 @@ input {
     width: 100%;
     background-color: red;
     color: black;
+    text-shadow: white 0 2px;
     font-family: monospace;
     font-size: large;
     display: flex;
@@ -130,6 +131,7 @@ input {
     border: 3px solid red;
     background-color: black;
     color: white;
+    text-shadow: red 0 2px;
     font-family: monospace;
     border-radius: 0 0 5px 5px;
     display: flex;
