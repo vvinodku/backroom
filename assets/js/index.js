@@ -1,5 +1,5 @@
 //Terminal pop up
-const secretFile = document.getElementById('file1');
+const secretFile = document.getElementById('file2');
 const terminal = document.getElementById('terminal');
 
 
@@ -74,7 +74,8 @@ input.addEventListener("animationend", () => {
 
 //Error effect
 const template = document.getElementById("errorTemplate");
-const btn = document.getElementById("file2");
+const btn = document.getElementById("file1");
+const btn2 = document.getElementById("file3");
 
 const MAX = 18;           // how many to spawn total
 const SPAWN_EVERY = 250;  // ms between spawns
@@ -153,3 +154,4 @@ function stop(){
 }
 
 btn.addEventListener("click", start);
+btn2.addEventListener("click", start);
