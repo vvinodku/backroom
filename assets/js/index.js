@@ -70,3 +70,86 @@ input.addEventListener("keydown", (e) => {
 input.addEventListener("animationend", () => {
     input.classList.remove("error");
 });
+
+
+//Error effect
+const template = document.getElementById("errorTemplate");
+const btn = document.getElementById("file2");
+
+const MAX = 18;           // how many to spawn total
+const SPAWN_EVERY = 250;  // ms between spawns
+const CLOSE_EVERY = 350;  // ms between closes
+
+let spawned = [];
+let spawnTimer = null;
+let closeTimer = null;
+
+function rand(min, max){ return Math.random() * (max - min) + min; }
+
+function spawnOne(){
+  const el = template.cloneNode(true);
+  el.hidden = false;
+  el.removeAttribute("id"); // avoid duplicate IDs
+  document.body.appendChild(el);
+
+  // Measure so we can keep it inside the viewport
+  const rect = el.getBoundingClientRect();
+  const x = rand(0, Math.max(0, window.innerWidth - rect.width));
+  const y = rand(0, Math.max(0, window.innerHeight - rect.height));
+
+  el.style.left = `${x}px`;
+  el.style.top  = `${y}px`;
+
+  spawned.push(el);
+}
+
+function start(){
+  // reset if running
+  stop();
+
+  spawned = [];
+
+  spawnTimer = setInterval(() => {
+    spawnOne();
+
+    if (spawned.length >= MAX){
+      clearInterval(spawnTimer);
+      spawnTimer = null;
+
+      // start closing after a brief pause
+      setTimeout(beginClosing, 600);
+    }
+  }, SPAWN_EVERY);
+}
+
+function beginClosing(){
+  let i = 0;
+  closeTimer = setInterval(() => {
+    if (i >= spawned.length){
+      clearInterval(closeTimer);
+      closeTimer = null;
+      return;
+    }
+
+    const el = spawned[i];
+    el.classList.add("closing");
+
+    // remove after transition ends
+    setTimeout(() => el.remove(), 950);
+
+    i++;
+  }, CLOSE_EVERY);
+}
+
+function stop(){
+  if (spawnTimer) clearInterval(spawnTimer);
+  if (closeTimer) clearInterval(closeTimer);
+  spawnTimer = null;
+  closeTimer = null;
+
+  // remove any existing instances immediately
+  spawned.forEach(el => el.remove());
+  spawned = [];
+}
+
+btn.addEventListener("click", start);
