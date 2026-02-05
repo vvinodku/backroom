@@ -58,7 +58,7 @@ const correctPassword = "abribe";
 input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         if (input.value === correctPassword) {
-            window.location.href = "menu.html";
+            window.location.href = "cabinet.html";
         } else {
             input.value = "";
             input.placeholder = "Wrong password";
