@@ -1,0 +1,122 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  /* background: rgb(16, 16, 16); */
+  background: rgb(240, 240, 240);
+}
+
+#title {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Courier New", monospace;
+  font-size: 22px;
+  letter-spacing: 0.12em;
+  color: #111;
+  z-index: 20;
+  user-select: none;
+}
+
+#cursor {
+  margin-left: 4px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+
+.svg {
+  width: 100%;
+  height: auto;
+}
+
+.file {
+  width: 100%;
+  height: auto;
+}
+
+#back{
+  position:absolute;
+  left: 20%;
+  top: 40%;
+  width: 60%;
+  z-index: 1;
+}
+
+#file6 {
+  position: absolute;
+  left: 25.5%;
+  top: 35%;
+  width: 49%;
+  height: auto;
+  z-index: 2;
+}
+
+#file5 {
+  position: absolute;
+  left: 25%;
+  top: 39%;
+  width: 50%;
+  height: auto;
+  z-index: 3;
+}
+
+#file4 {
+  position: absolute;
+  left: 24.5%;
+  top: 43%;
+  width: 51%;
+  height: auto;
+  z-index: 4;
+}
+
+#file3 {
+  position: absolute;
+  left: 24%;
+  top: 47%;
+  width: 52%;
+  height: auto;
+  z-index: 5;
+}
+
+#file2 {
+  position: absolute;
+  left: 23.5%;
+  top: 51%;
+  width: 53%;
+  height: auto;
+  z-index: 6;
+}
+
+#file1 {
+  position: absolute;
+  left: 23%;
+  top: 55%;
+  width: 54%;
+  height: auto;
+  z-index: 7;
+}
+
+#front{
+  position: absolute;
+  left: 15%;
+  top: 70%;
+  width: 70%;
+  z-index: 8;
+}
+
+/* make files feel interactive */
+[id^="file"] { cursor: pointer; }
+
+/* helps GSAP transforms stay smooth */
+#file1, #file2, #file3, #file4, #file5, #file6 {
+  will-change: transform;
+}
+
+.file { pointer-events: none; }
